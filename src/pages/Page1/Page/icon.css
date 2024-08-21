@@ -1,4 +1,3 @@
-
 /* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
   font-family: 'iconfont';  /* Project id 4591296 */
@@ -26,19 +25,79 @@
 }
 .icon-yonghu:before{
   content: '\e65e';
-  font-size: 15px;
+  font-size: 18px;
   color: black;
   z-index: 100;
 }
 .icon-mima:before{
   content: '\e602';
-  font-size: 15px;
+  font-size: 18px;
   color: black;
   z-index: 100;
 }
 .icon-guanli:before{
   content:"\e72b";
-  font-size:15px;
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-WeatherControl:before{
+  content:"\e63f";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-rain:before{
+  content:"\ea32";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-temperature:before{
+  content:"\e678";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-feelslike:before{
+  content:"\e6d9";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-weather:before{
+  content:"\e635";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-windspeed:before{
+  content:"\e661";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-humidity:before{
+  content:"\e696";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-winddirection:before{
+  content:"\eb1d";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-pressure:before{
+  content:"\e60a";
+  font-size:18px;
+  color:#fff;
+  z-index: 100;
+}
+.icon-time:before{
+  content:"\e763";
+  font-size:18px;
   color:#fff;
   z-index: 100;
 }

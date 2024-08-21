@@ -1,0 +1,136 @@
+.weather-report {
+  position: absolute;
+  top: 7%;
+  left: 30%;
+  z-index: 5;
+  width: 40%; /* 设置 weather-report 占据界面 40% 的宽度 */
+  height: calc(100vh - 14%); /* 设定高度以适应视口，减去 top 和 bottom 间距 */
+  overflow-y: auto; /* 添加垂直滚动条 */
+  overflow-x: hidden; /* 隐藏水平滚动条（如果不需要） */
+}
+
+.weather-container {
+  width: 80%; /* 设置 weather-container 占据 weather-report 宽度的 80% */
+  margin: 0 auto; /* 确保容器在 weather-report 内居中 */
+}
+
+.weather-box {
+  width: 100%; /* 确保每个卡片占据其父容器的 100% */
+  background-color: rgba(41, 40, 40, 0.5);
+  margin-bottom: 16px; /* 增加卡片之间的间距 */
+}
+
+.weather-box .ant-card-body {
+  padding: 16px; /* 增加卡片内部内容的间距 */
+}
+
+.weather-box-header {
+  display: flex;
+  justify-content: center; /* 将标题居中 */
+  position: relative; /* 允许子元素绝对定位 */
+  padding: 0 1vw; /* 添加左右内边距，确保图标与边缘保持距离 */
+}
+
+.weather-box-space {
+  width: 100%;
+  justify-content: space-between; /* 在头部中间分布元素 */
+}
+
+.weather-icon,
+.action-icon {
+  width: 50px; /* 设置图标大小一致 */
+  height: 50px;
+  margin-right: 16px; /* 图标右侧留出间距 */
+  font-size: 1.2vw; /* 确保所有图标大小一致 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-icon {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+}
+
+.action-icons.first-card .align-icon {
+  position: absolute;
+  right: 1vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.action-icons.other-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.action-icons.other-card .align-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.action-icons.other-card .close-icon {
+  position: absolute;
+  right: 1vw;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-input {
+  margin-bottom: 16px;
+  width: 100%; /* 让搜索框占据整个宽度 */
+}
+
+.search-button {
+  margin-bottom: 16px;
+  width: 100%; /* 让按钮占据整个宽度 */
+}
+
+.nameh3 {
+  color: #38EEFF;
+  font-size: 1.2vw;
+  text-align: center; /* 文本居中 */
+  margin-bottom: 16px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between; /* 左右列布局 */
+  padding: 0 1vw; /* 确保左右两列与边缘有一定的间距 */
+}
+
+.weather-column {
+  width: 48%; /* 每列占据父容器的 48% */
+}
+
+.weather-column p {
+  color: #38EEFF;
+  font-size: 1vw;
+  display: flex;
+  align-items: center; /* 图标与文本垂直居中对齐 */
+  margin: 10px 0;
+}
+
+.weather-column .iconfont {
+  margin-right: 8px; /* 图标与文本之间的间距 */
+  font-size: 1.2em;
+}
+
+.arrow-up {
+  color: red; /* 向上箭头红色 */
+}
+
+.arrow-down {
+  color: green; /* 向下箭头绿色 */
+}
+
+/* 确保其他部分占据父级容器的 100% 宽度 */
+.ant-space,
+.ant-space-item {
+  width: 100%;
+}

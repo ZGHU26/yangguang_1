@@ -109,7 +109,7 @@ const AdminUserManagement = () => {
       // 可以根据返回的消息做进一步的处理，例如更新界面状态等
   
     } catch (error) {
-      console.error('Error approving user:', error);
+    
       message.error(t('Errorapprovinguser'));
       // 处理错误情况
     }
@@ -127,7 +127,7 @@ const AdminUserManagement = () => {
       // 可以根据返回的消息做进一步的处理，例如更新界面状态等
   
     } catch (error) {
-      console.error('Error rejecting user:', error);
+    
       message.error(t('Errorrejectinguser'));
       // 处理错误情况
     }

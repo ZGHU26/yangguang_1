@@ -12,13 +12,16 @@ import {
 import mapboxgl from 'mapbox-gl';
 import { useNavigate } from 'react-router-dom';
 import "./index.css"
-
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import { setMapX } from '*/modules/Bmap';
 import { setPageOpen } from '*/modules/PageManage';
 import { setIntervalState,setViewState,setAngle} from '*/modules/CameraStore'
-
+import { useTranslation } from 'react-i18next';
+import i18n from '@/translations';
+import { setShowWeather } from '*/modules/WeatherStore';
+import { setIsRaining } from '*/modules/RainStore';
+import Weather from "@@/Weather"
 const { SubMenu } = Menu;
  // 是否展开全部组件
 
@@ -31,7 +34,32 @@ const App = () => {
   const setPageOpen_1 = (data) => {
     dispatch(setPageOpen(data));
   };
+//------------------------------------------------天气-----------------------------------//
+//#region 天气情况
+
+  const { SubMenu } = Menu;
+  const { t } = useTranslation();
+
+  const showWeather = useSelector((state) => state.WeatherStore); // 确保路径正确
+
+  const handleToggle = () => {
+    console.log("handleToggle called");
+    dispatch(setShowWeather(!showWeather)); // 切换显示状态
+  };
+
+  //#endregion
+  //#region下雨功能
+  const isRaining = useSelector((state) => state.Rain)
+
+  const toggleRain = () => {
+    dispatch(setIsRaining(!isRaining));  // 切换下雨状态
+  };
+
+
+  //#endregion
+
 //----------------------------------组件展开-------------------------------//
+//#region
    //#region PV&Inspection
    const handleClick1 = () => {
     setPageOpen_1({
@@ -99,7 +127,7 @@ const App = () => {
 
   }
   //#endregion
- 
+   //#endregion
  //-----------------------------------旋转功能----------------------------//
  //#region 旋转
   const {interval,viewState,angle} = useSelector((state) => state.Camera);
@@ -201,13 +229,13 @@ useEffect(() => {
 const items = [
     { key: 'xuanzhuan',
       label: <span onClick={handleSwitchChange} style={{ color: '#fff' }}>旋转</span>,
-      icon:loading ?<LoadingOutlined  style={{color:'#fff'}}  onClick={handleSwitchChange} /> : <RedoOutlined  style={{color:'#fff'}} onClick={handleSwitchChange}/>,
+      icon:loading ?<LoadingOutlined  style={{color:'#fff',fontSize:"16px"}}  onClick={handleSwitchChange} /> : <RedoOutlined  style={{color:'#fff',fontSize:"18px"}} onClick={handleSwitchChange}/>,
      
 },
     {
       key: 'fonction',
       label: <span style={{ color: '#fff' }}>功能</span>,
-      icon: <ToolOutlined   style={{color:'#fff'}}/>,
+      icon: <ToolOutlined   style={{color:'#fff',fontSize:"16px"}}/>,
       children : [
         { key: 'handleClick1', label: <Button style={{ backgroundColor: 'rgba(0,0,0,0.5)'}} onClick={handleClick1}>PV&Robot</Button> },
         { key: 'handleClick3', label: <Button style={{ backgroundColor: 'rgba(0,0,0,0.5)'}}onClick={handleClick3}>Micro&V2&Flash</Button> },
@@ -219,7 +247,7 @@ const items = [
     {
       key: 'Mapstyle',
       label : <span style={{ color: '#fff' }}>地图样式</span>,
-      icon: <GlobalOutlined  style={{color:'#fff'}}/>,
+      icon: <GlobalOutlined  style={{color:'#fff',fontSize:"16px"}}/>,
       children: [
         { key: '7', label: '卫星地图', onClick: handleMenuclick},
         { key: '8', label: '黑', onClick: handleMenuclick },
@@ -227,9 +255,15 @@ const items = [
       ],
     },
     {
+      key: "weather",
+      label: <span onClick={handleToggle} style={{ color: '#fff' }}>天气情况</span>,
+      icon: <span className='iconfont icon-WeatherControl' style={{ color: '#fff' }} onClick={handleToggle} />,
+    },
+  
+    {
       key: 'tuichu',
       label: <span  onClick={handleLogout} style={{ color: '#fff' }}>退出</span>,
-      icon: <PoweroffOutlined  style={{color:'#fff'}} onClick={handleLogout} />,
+      icon: <PoweroffOutlined  style={{color:'#fff',fontSize:"16px"}} onClick={handleLogout} />,
     },
   ];
 
@@ -251,7 +285,7 @@ const items = [
       <a onClick={(e) => e.preventDefault()}>
       <Card  bordered={false}  style={{ backgroundColor: '#001529' }} >
         <Space>
-          <SettingOutlined  style={{color:'#fff',fontSize: '15px'}}/>
+          <SettingOutlined  style={{color:'#fff',fontSize: '16px'}}/>
         </Space>
         </Card>
       </a>

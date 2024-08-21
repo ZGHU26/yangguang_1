@@ -9,7 +9,7 @@ import CameraReducer from './modules/CameraStore'
 import Bmap from './modules/Bmap'
 import Userx from "./modules/Userx"
 import RainReducer from './modules/RainStore'
-import WeatherReducer from './modules/Weather'
+import WeatherReducer from './modules/WeatherStore'
 const store = configureStore({
   reducer:{
     microGrid:microGridReducer,
