@@ -12,6 +12,7 @@ import V2 from '@@/V2'
 import Background from "@@/Background"
 import Clock from "@@/Clock"
 import Fonction from "@@/Fonction"
+import Weather from "@@/Weather"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Head />
       <Clock />
       <Fonction/>
+      <Weather/>
       <MicroGrids />
       <PV />
       <Issues />

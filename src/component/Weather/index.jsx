@@ -13,7 +13,7 @@ const defaultCity = 'shenzhen';
 const WeatherReport = () => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const showWeather = useSelector((state) => state.WeatherStore);
+  const showWeather = useSelector((state) => state.Weather.showWeather);
   const [weatherData, setWeatherData] = useState([]);
   const [forecastData, setForecastData] = useState([]);
   const [location, setLocation] = useState('');

@@ -1,4 +1,4 @@
-// weatherSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 const weatherSlice = createSlice({

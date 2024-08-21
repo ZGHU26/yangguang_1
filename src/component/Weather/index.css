@@ -55,7 +55,7 @@
 
 .action-icons.first-card .align-icon {
   position: absolute;
-  right: 1vw;
+  right: -1vw;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -69,14 +69,14 @@
 
 .action-icons.other-card .align-icon {
   position: absolute;
-  left: 50%;
+  left: 0%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .action-icons.other-card .close-icon {
   position: absolute;
-  right: 1vw;
+  right: -1.5vw;
   top: 50%;
   transform: translateY(-50%);
 }

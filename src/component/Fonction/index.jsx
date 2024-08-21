@@ -21,7 +21,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from '@/translations';
 import { setShowWeather } from '*/modules/WeatherStore';
 import { setIsRaining } from '*/modules/RainStore';
-import Weather from "@@/Weather"
+
 const { SubMenu } = Menu;
  // 是否展开全部组件
 
@@ -40,10 +40,10 @@ const App = () => {
   const { SubMenu } = Menu;
   const { t } = useTranslation();
 
-  const showWeather = useSelector((state) => state.WeatherStore); // 确保路径正确
+  const showWeather = useSelector((state) => state.Weather.showWeather); // 确保路径正确
 
   const handleToggle = () => {
-    console.log("handleToggle called");
+ 
     dispatch(setShowWeather(!showWeather)); // 切换显示状态
   };
 
@@ -209,16 +209,15 @@ useEffect(() => {
       try {
       const response = await axios.get('http://127.0.0.1:5000/admin/usermanagement',
         { headers });
-      console.log('Response data:', response.data); 
+     
       if (response.data.is_admin) {
         setIsAdmin(true);
-        console.log('Admin status: true');
+    
       } else {
         setIsAdmin(false);
       }
     } catch (error) {
-      console.error('Error fetching user info:', error);
-      console.error('Error details:', error.response);
+
       setIsAdmin(false);
     }
   };
@@ -259,7 +258,18 @@ const items = [
       label: <span onClick={handleToggle} style={{ color: '#fff' }}>天气情况</span>,
       icon: <span className='iconfont icon-WeatherControl' style={{ color: '#fff' }} onClick={handleToggle} />,
     },
+    {
+      key: 'weather1',
+      label: <span style={{ color: '#fff' }}>天气</span>,
+      icon: <span className='iconfont icon-WeatherControl' style={{ color: '#fff' }} />,
+      children: [
   
+        {
+          key: 'rainy',
+          label: <Button style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} onClick={() => toggleRain('rainy')}>{isRaining ? "停止下雨" : "下雨"}</Button>
+        },
+      ]
+    },
     {
       key: 'tuichu',
       label: <span  onClick={handleLogout} style={{ color: '#fff' }}>退出</span>,
