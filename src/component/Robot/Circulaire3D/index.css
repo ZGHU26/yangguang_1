@@ -1,0 +1,9 @@
+.Robot {
+  position: absolute;
+  z-index: 1000;
+  left:5%;
+  width: 90%;
+  height: 50%;
+  top: 0%;
+  mix-blend-mode: normal;
+}

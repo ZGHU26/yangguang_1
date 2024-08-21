@@ -1,0 +1,11 @@
+.Ballwater {
+  position: absolute;
+  z-index: 3;
+  left: 23%;
+  top:15%;
+  height: 70%;
+  width: 22%;
+  mix-blend-mode: normal;
+  overflow: 100% 100%;
+  background-color: linear-gradient(180deg,rgba(51,204,204,1) 0%,rgba(31,89,89,0.25)100%);
+}

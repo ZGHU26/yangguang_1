@@ -1,0 +1,25 @@
+.yanqian{
+
+    position: absolute;
+    left:82%;
+    top:1vh;
+    width:10vw;
+    height: 0vh;
+    z-index: 3;
+    mix-blend-mode: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+.yanqian .ant-card{
+  background-color: #001529;
+  color: #fff;
+  width: 3vw; 
+  height:3vw; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center 
+}
+

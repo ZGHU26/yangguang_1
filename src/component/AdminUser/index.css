@@ -1,0 +1,136 @@
+.adminsysteme {
+
+  position: absolute;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image:  url(https://img.js.design/assets/img/6651a9ab4ae252d9ebeb7a73.png#605867f942a36f4122dee3448fb1fcbe);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -ms-background-size: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zitih2{
+  font-size: 3vw;
+  font-family: 'Arial', sans-serif; 
+  text-align: center;
+  position: relative;
+  top:-5%;
+  color: #2E86C1;
+}
+.container1 {
+  position: absolute;
+  width: 70%;
+  height: 90%;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.8); /* 调整背景颜色和透明度 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.button2{
+  display: flex;
+  position: absolute;
+  width: 10vw;
+  left: 85%;
+  top:2%;
+  height: 7vh;
+}
+.button3{
+  display: flex;
+  position: absolute;
+  width: 24%;
+  left: 38%;
+  top:90%;
+  height: 5%;
+  z-index: 1000;
+}
+.table-buttons {
+  position: absolute;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.6); /* 调整背景颜色和透明度 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  padding: 2em;
+}
+.adduser {
+  margin-bottom: 10px;
+}
+
+.ant-form-item-label > label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.ant-form-item {
+  margin-bottom: 20px;
+}
+
+.ant-input, .ant-input-password {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background-color: #40a9ff;
+  border-color: #40a9ff;
+}
+.custom-cancel-button {
+  background-color: #f5222d; /* 红色 */
+  border-color: #f5222d;
+  color: white;
+}
+
+.Table1 {
+  position: absolute;
+  z-index: 2;
+  height: 75%;
+  width: 90%;
+  left:5%;
+  border: none;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  top: 15%;
+}
+.Table1 .ant-table {
+  background-color: rgba(0, 0, 0, 0) !important
+}
+
+.Table1 .ant-table-thead>tr>th {
+  background: rgba(255, 255, 255, 0.6);
+  color:black;
+  padding: 1vw;
+  border-bottom: 1px solid rgba(255, 255, 225, 0.2);
+}
+
+.Table1 .ant-table-tbody>tr>td {
+  background: rgba(255, 255, 255, 0.6);
+    color:black;
+    padding: 0.1vw;
+    border-bottom: 1px solid rgba(255, 255, 225, 0.1);
+  }
+.Table1.ant-table-thead >tr.ant-table-cell>th{
+  width: 25%;
+}
+.custom-modal .ant-modal-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-modal .ant-modal-footer .ant-btn {
+  flex: 1;
+  margin-right: 8px; /* 可调整按钮之间的间距 */
+}

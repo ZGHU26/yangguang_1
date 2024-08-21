@@ -1,0 +1,17 @@
+.clock {
+  position: absolute;
+  z-index: 2;
+  left: 2%;
+  top: 3%;
+  width: 20%;
+  height: 3%;
+  mix-blend-mode: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 1.4vw;
+  color: #fff;
+}
+

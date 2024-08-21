@@ -1,0 +1,33 @@
+.Table {
+  position: absolute;
+  z-index: 2;
+  border: none;
+  mix-blend-mode: normal;
+  overflow: hidden;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+}
+.Table .ant-table {
+  background-color: rgba(0, 0, 0, 0) !important
+}
+
+.Table .ant-table-thead>tr>th {
+  background: linear-gradient(180deg, rgba(56, 238, 255, 0.25) 0%, rgba(56, 238, 255, 0) 100%);
+  color: #fff;
+  padding: 1vw;
+  border-bottom: 1px solid rgba(255, 255, 225, 0.2);
+}
+.Table .ant-table-tbody > tr:hover > td {
+  background-color:rgba(0, 0, 0, 0.1)!important; /* 悬停时的背景颜色 */
+  color:#fff}
+  .Table .ant-table-tbody>tr>td {
+    background: linear-gradient(180deg, rgba(56, 238, 255, 0.25) 0%, rgba(56, 238, 255, 0) 100%);
+    color: #fff;
+    padding: 0.1vw;
+    border-bottom: 1px solid rgba(255, 255, 225, 0.1);
+  }
+.Table.ant-table-thead >tr.ant-table-cell>th{
+  width: 25%;
+}

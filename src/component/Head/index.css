@@ -1,0 +1,15 @@
+.zhengti {
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 0px;
+  width: 1920px;
+  height: 96px;
+  mix-blend-mode: normal;
+  background: linear-gradient(180deg, rgba(56, 238, 255, 0.15) 0%, rgba(6, 17, 34, 0.15) 100%);
+  overflow: hidden;
+}
+
+.zhengti.fixed-width {
+  width: 1920px;
+}

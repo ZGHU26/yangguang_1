@@ -1,0 +1,14 @@
+.Circulaire {
+  position: absolute;
+  z-index: 3;
+  left: 35%;
+  top: 5%;
+  width: 60%;
+  height: 90%;
+  mix-blend-mode: normal;
+}
+.CirculaireEchart {
+  position: absolute;
+  height: 100% !important;
+  width: 100%;
+}

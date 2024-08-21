@@ -1,0 +1,136 @@
+.Login  {
+  position: absolute;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image:  url(https://img.js.design/assets/img/6651a9ab4ae252d9ebeb7a73.png#605867f942a36f4122dee3448fb1fcbe);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  -ms-background-size: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-container {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 20px; 
+  top:20px
+}
+
+.container {
+  position: absolute;
+  width: 300px;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.8); /* 调整背景颜色和透明度 */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #00769f; /* 调整标题颜色 */
+}
+
+form {
+  display: grid;
+  gap: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #333; /* 调整标签颜色 */
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 12px;
+  font-size: 16px;
+  color: #555;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #00769f;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005580; /* 鼠标悬停时的背景色 */
+}
+
+p {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 14px;
+  color: #dc3545; /* 调整错误信息颜色 */
+}
+
+button.switch-button {
+  background-color: transparent;
+  border: none;
+  color: #00769f;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+button.switch-button:hover {
+  color: #005580; /* 鼠标悬停时的颜色 */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+      padding: 1em;
+  }
+  h2 {
+      font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h2 {
+      font-size: 20px;
+  }
+  input[type="text"],
+  input[type="password"] {
+      font-size: 14px;
+  }
+  button {
+      font-size: 14px;
+      padding: 10px;
+  }
+  p {
+      font-size: 12px;
+  }
+  button.switch-button {
+      font-size: 12px;
+  }
+}

@@ -1,0 +1,8 @@
+.Histogramme2 {
+  position: absolute;
+  z-index: 4;
+  left: 45%;
+  width: 55%;
+  height: 100%;
+  mix-blend-mode: normal;
+  background-color: linear-gradient(180deg,rgba(51,204,204,1) 0%,rgba(31,89,89,0.25)100%);}
