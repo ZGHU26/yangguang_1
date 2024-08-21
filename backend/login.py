@@ -9,7 +9,7 @@ import datetime
 app = Flask(__name__,static_url_path='/')
 CORS(app )
 
-CSV_FILE = 'backend/users.csv'
+CSV_FILE = 'yangguang_1/backend/users.csv'
 SECRET_KEY = os.urandom(32)
 
 # 辅助函数：验证JWT token
