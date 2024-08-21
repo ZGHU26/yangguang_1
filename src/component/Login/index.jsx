@@ -142,13 +142,14 @@ const LoginRegister = () => {
                     {/* 插个眼 */}
                 </form>
 
-                <p>{message}</p>
+                <p>  </p>
                 {!isAdminRegister && (
                     <button onClick={handleToggleForm}>
                         {isLogin ? t('goToRegister') : t('goBackToLogin')}
                     </button>
                 )}
-                 <p>{message}</p>
+                 <p>  </p>
+                 
                 {isLogin && (
                     <button onClick={handleAdminRegister} >
                         {t('registerForAdmin')}
@@ -163,6 +164,7 @@ const LoginRegister = () => {
                         {t('goBackToLogin')}
                     </button>
                 )}
+                 <p> {message} </p>
             </div>
         </div>
     );

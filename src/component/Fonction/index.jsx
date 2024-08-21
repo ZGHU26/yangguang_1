@@ -49,7 +49,7 @@ const App = () => {
 
   //#endregion
   //#region下雨功能
-  const isRaining = useSelector((state) => state.Rain)
+  const isRaining = useSelector((state) => state.Rain.isRaining)
 
   const toggleRain = () => {
     dispatch(setIsRaining(!isRaining));  // 切换下雨状态
@@ -295,7 +295,7 @@ const items = [
       <a onClick={(e) => e.preventDefault()}>
       <Card  bordered={false}  style={{ backgroundColor: '#001529' }} >
         <Space>
-          <SettingOutlined  style={{color:'#fff',fontSize: '16px'}}/>
+          <SettingOutlined  style={{color:'#fff',fontSize: '25px'}}/>
         </Space>
         </Card>
       </a>

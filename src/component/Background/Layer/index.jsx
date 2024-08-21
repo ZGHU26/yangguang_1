@@ -39,25 +39,25 @@ function App() {
   //#region 下雨
   const rainEffectInstance = useRef(null);
   const canvasRef = useRef(null); 
-  const isRaining = useSelector((state) => state.Rain)
+  const isRaining = useSelector((state) => state.Rain.isRaining)
  
 
   useEffect(() => {
-
+  
 
     if (isRaining) {
       if (canvasRef.current && !rainEffectInstance.current) {
         rainEffectInstance.current = createRainEffect(canvasRef.current);
-      
+   
       }
     } else if (rainEffectInstance.current) {
       const ctx = canvasRef.current.getContext('2d');
       ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
       rainEffectInstance.current = null;
- 
+
     }
   }, [isRaining]);
-
+  
 
   
 
