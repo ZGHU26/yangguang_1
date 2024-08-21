@@ -6,8 +6,8 @@ const CameraStore = createSlice({
     interval: undefined, // 是否正在旋转地图
     angle : 120,
     viewState:{
-      longitude: 113.974171 - 0.00196,
-      latitude: 22.594238 + 0.00195,
+      longitude: 151.21521221272272,
+      latitude: -33.85697951378984,
       zoom: 18,
       minZoom: 13,
       maxZoom: 30,

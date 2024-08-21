@@ -144,17 +144,15 @@ function App() {
     },
     getElevation: (f) => f.properties.height,
    }),
-  //  new Tile3DLayer({
-  //   id: 'tile-3d-layer',
-  //   // Tileset json file url
-  //   data: '/tileMapApi/backend/result_hk2/tileset.json',
-  //   loader: Tiles3DLoader,
-  //   onTilesetLoad: (tileset) => {
-  //     const {cartographicCenter, zoom} = tileset;
-  //     console.log(cartographicCenter)
-  //   },
-  //   pointSize: 2
-  // })
+   new Tile3DLayer({
+    id: 'tile-3d-layer',
+    data: '/tileMapApi/backend/tileset.json',
+    loader: Tiles3DLoader,
+    onTilesetLoad: (tileset) => {
+      const {cartographicCenter, zoom} = tileset;
+    },
+    pointSize: 2
+  })
 
   //#region 点云
   // pointcloud_isshow && new PointCloudLayer({

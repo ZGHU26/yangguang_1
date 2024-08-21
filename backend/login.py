@@ -130,7 +130,8 @@ def check_token():
 
     except jwt.ExpiredSignatureError:
         return jsonify({'status': 'failed', 'message': 'Token expired'}), 401
-  
+    except jwt.InvalidTokenError:
+        return jsonify({'status': 'failed', 'message': 'Invalid token'}), 401
     except Exception as e:
         print(f"Error while validating token: {e}")
         return jsonify({'status': 'failed', 'message': 'Token validation failed'}), 500
