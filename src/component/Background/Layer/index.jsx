@@ -151,9 +151,10 @@ function App() {
     onTilesetLoad: (tileset) => {
       const {cartographicCenter, zoom} = tileset;
     },
-    pointSize: 2
+    pointSize: 2,
+    
   })
-
+  
   //#region 点云
   // pointcloud_isshow && new PointCloudLayer({
   //   id: 'PointCloudLayer',

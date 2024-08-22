@@ -37,7 +37,7 @@
         },
         "geometricError": 400000,
         "content": {
-          "uri": "./solar_insolation.glb"
+          "uri": "./result.glb"
         }
       }
     ]
