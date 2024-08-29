@@ -116,7 +116,8 @@ function App() {
     position: [113.974171, 23.594238, 80000]
   });
   const lightingEffect = new LightingEffect({ambientLight, pointLight1,pointLight2});
-  const scenegraphLayer = [new ScenegraphLayer({
+  const scenegraphLayer = [
+    new ScenegraphLayer({
     id: 'ScenegraphLayer',
     data: [{ 'coord': [113.974171 - 0.00196, 22.594238 + 0.00234] }
     ],

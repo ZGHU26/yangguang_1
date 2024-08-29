@@ -37,7 +37,7 @@
         },
         "geometricError": 400000,
         "content": {
-          "uri": "./result_with_vertex_colors.glb"
+          "uri": "./0_0.glb"
         }
       }
     ]
