@@ -5,10 +5,10 @@ import { CaretUpOutlined, CaretDownOutlined, CloseCircleOutlined, AlignLeftOutli
 import { useSelector, useDispatch } from 'react-redux';
 import './index.css';
 import { useTranslation } from 'react-i18next';
-
+import { setCityname } from '*/modules/City';
 const apiKey = 'c1a479140786d3ec386ce555a0218b7e';
 const googleApiKey = 'AIzaSyDPZ4k5RYBzlTnGpl4ps5Q1XNOLuYLK6Mk';
-const defaultCity = 'shenzhen';
+
 
 const WeatherReport = () => {
   const { t } = useTranslation();
@@ -18,10 +18,10 @@ const WeatherReport = () => {
   const [forecastData, setForecastData] = useState([]);
   const [location, setLocation] = useState('');
   const [showForecast, setShowForecast] = useState({});
-
+const cityname =useSelector ((state)=> state.City.cityname)
   useEffect(() => {
-    fetchWeather(defaultCity);
-  }, []);
+    fetchWeather(cityname);
+  }, [cityname]);
 
   const translateText = async (text, targetLang = 'en') => {
     const url = `https://translation.googleapis.com/language/translate/v2?key=${googleApiKey}`;

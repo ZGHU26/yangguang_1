@@ -10,6 +10,7 @@ import Bmap from './modules/Bmap'
 import Userx from "./modules/Userx"
 import RainReducer from './modules/RainStore'
 import WeatherReducer from './modules/WeatherStore'
+import CityReducer from "./modules/City"
 const store = configureStore({
   reducer:{
     microGrid:microGridReducer,
@@ -23,7 +24,7 @@ const store = configureStore({
     Userx:Userx,
     Rain:RainReducer,
     Weather:WeatherReducer,
-
+    City:CityReducer,
   }
 })
 export default store

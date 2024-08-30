@@ -48,13 +48,44 @@ const App = () => {
   };
 
   //#endregion
-  //#region下雨功能
+  //#region下雨功能（可控）
   const isRaining = useSelector((state) => state.Rain.isRaining)
+  const [manualOverride, setManualOverride] = useState(false); // 用于跟踪手动停止状态
+  const cityname =useSelector ((state)=> state.City.cityname)
+  const apiKey = 'c1a479140786d3ec386ce555a0218b7e';
+    // 自动控制下雨效果
+    useEffect(() => {
+        const fetchWeatherData = async () => {
+            try {
+              const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityname)}&appid=${apiKey}&units=metric`);
+                const weatherData = response.data;
+                console.log(weatherData);
 
-  const toggleRain = () => {
-    dispatch(setIsRaining(!isRaining));  // 切换下雨状态
-  };
+                // 检查是否包含“rain”关键词，且未手动停止
+                if (weatherData.weather.some(condition => condition.main.toLowerCase().includes('rain')) && !manualOverride) {
+                    if (!isRaining) {
+                        dispatch(setIsRaining(true)); // 触发下雨
+                    }
+                }
+            } catch (error) {
+                console.error("获取天气数据失败: ", error);
+            }
+        };
 
+        // 仅在未手动停止的情况下进行自动检查
+        if (!manualOverride) {
+            fetchWeatherData();
+            const intervalId = setInterval(fetchWeatherData, 600000); // 定期刷新
+
+            return () => clearInterval(intervalId); // 清除定时器
+        }
+    }, [isRaining, dispatch, manualOverride]);
+
+    // 手动切换下雨状态
+    const toggleRain = () => {
+        dispatch(setIsRaining(!isRaining)); // 切换下雨状态
+        setManualOverride(true); // 标志为手动停止
+    };
 
   //#endregion
 
